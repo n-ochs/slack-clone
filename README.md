@@ -30,7 +30,9 @@ Application is currently in development.
 
 ## Contributors
 Nick Ochs
+
 [Github](https://github.com/n-ochs)
+
 [nicholasochs.com](https://nicholasochs.com/)
 
 ## Have an idea, suggestion, or need assistance?
