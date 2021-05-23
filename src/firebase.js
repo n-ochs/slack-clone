@@ -1,3 +1,4 @@
+import firebase from 'firebase';
 require('dotenv').config();
 
 const firebaseConfig = {
@@ -8,3 +9,10 @@ const firebaseConfig = {
     messagingSenderId: process.env.REACT_APP_messagingSenderId,
     appId: process.env.REACT_APP_appId,
 };
+
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+const db = firebaseApp.firestore();
+const auth = firebase.auth();
+const provider = new firebase.auth.GoogleAuthProvider();
+
+export { auth, provider, db };
