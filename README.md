@@ -21,15 +21,6 @@ npm run start
 * [Styled Components](https://styled-components.com/) - Design
 * [Firebase](https://firebase.google.com/) - Hosting, Deployment, Databse, Authentication, Hooks
 
-Other technologies include:
-
-* [Axios](https://github.com/axios/axios) - make multiple asynchronous HTTP requests
-* [Mailgun](https://www.mailgun.com/) - provide email verification to users upon registration
-* [JWT](https://jwt.io/) & [JS-Cookie](https://github.com/js-cookie/js-cookie) - provide authorization for each request made to the database
-* [Chart.js](https://www.chartjs.org/) - in order to display visual data to users and to observe trends over time
-* [Material-UI](https://material-ui.com/) - overall design
-* [Netlify](https://www.netlify.com/) - application hosting
-
 ## Status
 Application is currently in development.
 
