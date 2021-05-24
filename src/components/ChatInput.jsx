@@ -4,11 +4,11 @@ import { Button } from '@material-ui/core';
 import { db } from '../firebase';
 import firebase from 'firebase';
 
-function ChatInput({ channelName, channelId }) {
+function ChatInput({ channelName, channelId, chatRef }) {
 
     const [ input, setInput ] = useState('');
 
-    const sendMessage = e => {
+    const sendMessage = (e) => {
         e.preventDefault();
 
         if (!channelId) {
@@ -20,6 +20,10 @@ function ChatInput({ channelName, channelId }) {
             timestamp: firebase.firestore.FieldValue.serverTimestamp(),
             user: 'Nick Ochs',
             userImage: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fblog.udemy.com%2Fwp-content%2Fuploads%2F2014%2F05%2Fbigstock-test-icon-63758263.jpg&f=1&nofb=1'
+        });
+
+        chatRef.current.scrollIntoView({
+            behavior: 'smooth'
         });
 
         setInput('');
