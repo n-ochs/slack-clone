@@ -5,23 +5,33 @@ import Sidebar from './components/Sidebar';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Chat from './components/Chat';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth } from './firebase';
+import Login from './components/Login';
 
 function App() {
+
+  const [ user, loading ] = useAuthState(auth);
+
   return (
     <div className="app">
       <Router>
-      <>
-        <Header />
-        <AppBody>
-          <Sidebar />
-          <Switch>
-            <Route path="/" exact>
-              <Chat />
-            </Route>
-          </Switch>
-        </AppBody>
-      </>
-    </Router>
+        {!user ? (
+          <Login />
+        ): (
+          <>
+            <Header />
+            <AppBody>
+              <Sidebar />
+              <Switch>
+                <Route path="/" exact>
+                  <Chat />
+                </Route>
+              </Switch>
+            </AppBody>
+          </>
+        )}
+      </Router>
     </div>
   );
 };

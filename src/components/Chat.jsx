@@ -35,7 +35,7 @@ function Chat() {
         chatRef?.current?.scrollIntoView({
             behavior: 'smooth'
         });
-    }, [roomId, loading])
+    }, [roomId, loading]);
 
     return (
         <ChatContainer>
