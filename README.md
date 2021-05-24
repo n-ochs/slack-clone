@@ -1,9 +1,9 @@
 # Slack Clone
 
-n/a
+(Slack Clone)[https://slack-clone-eadc7.web.app/]
 
 ## Scope of Functionalities
-n/a
+With the help of Firebase, users are able to sign into the application with Google and chat in real time with their friends. Through the magic of React & Redux, users can also create their own channels which feed into the Firebase database.
 
 ## Installation
 
@@ -19,10 +19,10 @@ npm run start
 * [Redux](https://redux.js.org/) - Application State Management
 * [Material-UI](https://material-ui.com/) - Design
 * [Styled Components](https://styled-components.com/) - Design
-* [Firebase](https://firebase.google.com/) - Hosting, Deployment, Databse, Authentication, Hooks
+* [Firebase](https://firebase.google.com/) - Hosting, Deployment, Database, Authentication, Hooks
 
 ## Status
-Application is currently in development.
+Application is deployed and running stable.
 
 ## Future Updates
 * React Native Mobile Application
