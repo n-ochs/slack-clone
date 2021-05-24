@@ -1,6 +1,6 @@
 # Slack Clone
 
-(Slack Clone)[https://slack-clone-eadc7.web.app/]
+[Live Website!](https://slack-clone-eadc7.web.app/)
 
 ## Scope of Functionalities
 With the help of Firebase, users are able to sign into the application with Google and chat in real time with their friends. Through the magic of React & Redux, users can also create their own channels which feed into the Firebase database.
