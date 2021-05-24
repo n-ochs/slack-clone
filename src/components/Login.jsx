@@ -14,8 +14,8 @@ function Login() {
         <LoginContainer>
             <LoginInnerContainer>
                 <img
-                    src='https://cdn.mos.cms.futurecdn.net/SDDw7CnuoUGax6x9mTo7dd.jpg'
-                    alt='slack-logo.jpg'
+                    src='https://cdn.mos.cms.futurecdn.net/SDDw7CnuoUGax6x9mTo7dd.jpg' 
+                    alt='slack-logo.jpg' 
                 />
                 <h1>Sign in to the Winner's Circle</h1>
                 <p>winnerscircle.slack.com</p>

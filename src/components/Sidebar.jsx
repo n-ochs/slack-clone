@@ -13,12 +13,15 @@ import AppsIcon from '@material-ui/icons/Apps';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AddIcon from '@material-ui/icons/Add';
-import { db } from '../firebase';
+import { auth, db } from '../firebase';
 import { useCollection } from 'react-firebase-hooks/firestore';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 function Sidebar() {
 
-    const [ channels, loading, error ] = useCollection(db.collection('rooms'));
+    const [ user ] = useAuthState(auth);
+
+    const [ channels ] = useCollection(db.collection('rooms'));
 
     return (
         <SidebarContainer>
@@ -27,7 +30,7 @@ function Sidebar() {
                     <h2>Winners Circle</h2>
                     <h3>
                         <FiberManualRecordIcon />
-                        Nick Ochs
+                        {user.displayName}
                     </h3>
                 </SidebarInfo>
                 <CreateIcon />

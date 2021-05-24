@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Button } from '@material-ui/core';
-import { db } from '../firebase';
+import { auth, db } from '../firebase';
 import firebase from 'firebase';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 function ChatInput({ channelName, channelId, chatRef }) {
+
+    const [ user ] = useAuthState(auth);
 
     const [ input, setInput ] = useState('');
 
@@ -18,8 +21,8 @@ function ChatInput({ channelName, channelId, chatRef }) {
         db.collection('rooms').doc(channelId).collection('messages').add({
             message: input,
             timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-            user: 'Nick Ochs',
-            userImage: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fblog.udemy.com%2Fwp-content%2Fuploads%2F2014%2F05%2Fbigstock-test-icon-63758263.jpg&f=1&nofb=1'
+            user: user.displayName,
+            userImage: user.photoURL,
         });
 
         chatRef.current.scrollIntoView({
